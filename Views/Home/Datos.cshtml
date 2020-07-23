@@ -1,0 +1,80 @@
+<div class="contenedorRegistro" style="text-align: center;">
+    
+
+            <div class="habtitulo">
+                
+    <h3>Se realizó la reserva</h3>
+<label> @ViewBag.Reserva.nom</label>
+<br>
+<h4>Gracias por su preferencia</h4>
+<br>
+<label>Su reserva es del @ViewBag.Reserva.checkin al @ViewBag.Reserva.checkout</label>
+<br>
+<br>
+<br>
+<div class="row">
+<div class="col-md-2">
+
+</div>
+<br>
+<div class="col-md-8">
+<table class="table table-responsive" style="margin-left: 30px;" >
+    <thead>
+        <tr>
+            <th>Tipo de habitación</th>
+            <th>Habitación</th>
+            <th>Precio</th>
+            <th></th>
+            <th>Días</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span>Habitación @ViewBag.Reserva.ape</span></td>
+            <td><label> @ViewBag.Reserva.habitaciones</label></td>
+            <td> @ViewBag.Reserva.precio</td>
+            <td>x</td>
+            <td> @ViewBag.Reserva.cant</td>
+
+            <td> @ViewBag.Reserva.sub</td>
+        </tr>
+        @if(ViewBag.hab1!=null){
+    
+
+                <tr>
+                    <td><span>Habitación  @ViewBag.tiphab2</span></td>
+                    <td><label>  @ViewBag.hab1</label></td>
+                    <td>@ViewBag.precio</td>
+                    <td>x</td>
+                    <td> @ViewBag.cant</td>
+                    <td> @ViewBag.sub</td>
+                </tr>
+        }
+        <tr>
+            <td>Monto a pagar </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><label> @ViewBag.Monto</label></td>
+        
+        </tr>
+
+    </tbody>
+</table>
+</div>
+<div class="col-md-2">
+   
+</div>
+<br><br>
+<br>
+<div class="col-md-4"></div>
+<div class="col-md-4">
+ <div class="btnReserva" style="margin-top: 25px;" >
+                    <a asp-controller="Home" asp-action="Index">Confirmar</a>
+    </div></div>
+    <div class="col-md-4"></div>
+</div>
+</div>
+</div>
